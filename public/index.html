@@ -16,7 +16,7 @@
         socket.on('disconnect',function () {
          console.console.log('los connect white the  server ');
        });
-         
+           
 
             socket.emit('mensaje',{
               nombre:'fernando'
@@ -25,7 +25,13 @@
            console.log('escuchando',payload);
 
             });
+            
+            socket.on('active-bands',function(bands){
+              console.clear();
+              console.table(bands);
 
+            }); 
+              
       </script>
 </body>
 </html>
